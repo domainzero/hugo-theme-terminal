@@ -12,9 +12,11 @@
       </span>
     {{ end }}
     {{ with .Params.Author }}
-      <span class="post-author">:: {{ . }} ::</span>
+      <span class="post-author">:: {{ . }}</span>
     {{ end }}
-      <span class="post-author"><a href="{{ .Permalink }}#isso-thread"> Comments</a></h1>
+    {{ if eq .Type $.Site.Params.contentTypeName }}
+      <span class="post-author"> :: <a href="{{ .Permalink }}#isso-thread"> Comments</a></h1>
+    {{ end }}
     {{ if and (.Param "readingTime") (eq (.Param "readingTime") true) }}
       <span class="post-reading-time">:: {{ .ReadingTime }} min read ({{ .WordCount }} words)</span>
     {{ end }}
@@ -57,7 +59,7 @@
   {{ end }}
   {{ if eq .Type $.Site.Params.contentTypeName }}
   {{ partial "comments.html" . }}
-  {{ end }} 
+  {{ end }}
   <!-- {{ partial "comments.html" . }} -->
 </div>
 {{ end }}

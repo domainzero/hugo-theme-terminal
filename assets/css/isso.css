@@ -1,0 +1,45 @@
+#comments { 
+  margin: 0 40px
+}
+#isso-thread *{
+  background:transparent!important;
+  border: none;
+}
+#isso-thread {
+  margin:0 40px!important;
+  padding-top: 15px;
+}
+#isso-thread h4{
+  display:none
+}
+#isso-thread input{
+  border:none;
+  font-family:"Fira Code";
+  color:#757575
+}
+.isso-comment > div.text-wrapper > .isso-comment-header .author {
+  color:var(--accent)!important;
+  font-size:1.2em
+}
+#isso-thread input[type=button], #isso-thread input[type=submit] { 
+  background-color: #ff6266;
+  color:#fff
+}
+time {
+  display:none
+}
+.spacer {
+  display:none
+}
+
+#isso-thread a {
+  color:--var(--accent);
+}
+#isso-thread svg{
+  fill:--var(--accent);
+
+}
+#isso-thread .votes {
+  color:--var(--accent);
+  font-size: 1.5em;
+}
